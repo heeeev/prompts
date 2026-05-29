@@ -22,7 +22,7 @@
     },
     {
       "id": "bbz-clean-studio",
-      "title": "C. Clean Studio 제품샷 (화이트 배경 변환) ⭐",
+      "title": "화이트 배경 제품샷",
       "description": "어둡거나 칙칙한 원본 사진을 화이트 라이트박스 컷으로 변환. 가장 자주 사용. 상세페이지 메인 비주얼·옵션 단체컷·썸네일용. 손 없이 제품만.",
       "category": "bbz",
       "tags": ["BBZ", "제품샷", "화이트배경", "GPT-4o", "자주사용"],
@@ -34,7 +34,7 @@
     },
     {
       "id": "bbz-seller-shot",
-      "title": "D. 셀러 직찍 무드 (손 없음) ⭐",
+      "title": "셀러 직찍 무드",
       "description": "셀러가 직접 데코해서 폰으로 찍은 듯한 자연스러운 핸드메이드 무드. 손 노출 없이 따뜻한 톤. 상세페이지 연출컷·인스타 피드. A2 대신 자주 사용.",
       "category": "bbz",
       "tags": ["BBZ", "핸드메이드", "라이프스타일", "GPT-4o", "자주사용"],
@@ -46,7 +46,7 @@
     },
     {
       "id": "bbz-soft-clean-hand",
-      "title": "A1. Soft & Clean + 손 있음",
+      "title": "소프트 라이프스타일 (손 연출)",
       "description": "BBZ 메인 톤 + 손 연출. 사이즈감·일상 사용 보여주는 컷. 라이프스타일 인스타 피드용.",
       "category": "bbz",
       "tags": ["BBZ", "라이프스타일", "손연출", "GPT-4o"],
@@ -58,7 +58,7 @@
     },
     {
       "id": "bbz-soft-clean-nohand",
-      "title": "A2. Soft & Clean + 손 없음",
+      "title": "소프트 라이프스타일 (제품만)",
       "description": "BBZ 메인 톤 + 제품 단독. 인스타 피드용 (라이프스타일 톤, 카페 무드).",
       "category": "bbz",
       "tags": ["BBZ", "라이프스타일", "제품단독", "GPT-4o"],
@@ -70,7 +70,7 @@
     },
     {
       "id": "bbz-coquette",
-      "title": "B1-a. 코케트 / 펄코어",
+      "title": "코케트·펄코어 무드",
       "description": "Gen Z 톤이지만 따뜻하고 사랑스러운 무드. 엔젤코어·Y2K 융합 라인, 리본·진주 컨셉 상품에 잘 맞음. 손 옵션.",
       "category": "bbz",
       "tags": ["BBZ", "엔젤코어", "코케트", "GPT-4o"],
@@ -82,7 +82,7 @@
     },
     {
       "id": "bbz-minimal-modern",
-      "title": "B1-b. 클린 미니멀 / 모던",
+      "title": "클린 미니멀 무드",
       "description": "Nothing Written·Mardi Mercredi·Matin Kim 같은 한국 인디 브랜드 인스타 톤. BBZ 시그니처·베이직 라인에 잘 맞음. 손 옵션.",
       "category": "bbz",
       "tags": ["BBZ", "미니멀", "인디브랜드", "시그니처", "GPT-4o"],
@@ -106,7 +106,7 @@
     },
     {
       "id": "bbz-switch-blue",
-      "title": "키보드 청축 이미지 (Pattern A 기준점)",
+      "title": "키보드 청축 이미지",
       "description": "BBZ 키보드 축 10종의 기준이 되는 청축 프롬프트. 다른 9개 축은 이 청축 이미지를 레퍼런스로 변형 생성.",
       "category": "bbz",
       "tags": ["BBZ", "키보드", "축", "Nano Banana", "Gemini"],
