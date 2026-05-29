@@ -27,17 +27,21 @@ function createChip(id, label, dotId, isActive) {
   return btn;
 }
 
-export function renderCards(container, prompts, categories, handlers) {
+export function renderCards(container, prompts, categories, state, handlers) {
   container.innerHTML = '';
   const catMap = new Map(categories.map(c => [c.id, c]));
 
   for (const p of prompts) {
     const cat = catMap.get(p.category);
+    const isFav = state.favorites.has(p.id);
+    const count = state.counts[p.id] || 0;
+
     const card = document.createElement('article');
-    card.className = 'card';
+    card.className = 'card' + (isFav ? ' is-favorite' : '');
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
     card.setAttribute('aria-label', `${p.title} 상세 보기`);
+    card.dataset.id = p.id;
 
     card.innerHTML = `
       <div class="card-header">
@@ -45,6 +49,14 @@ export function renderCards(container, prompts, categories, handlers) {
           <span class="card-category-dot" style="--dot-color: var(--color-cat-${p.category})"></span>
           ${escapeHTML(cat?.label || p.category)}
         </span>
+        <div class="card-header-right">
+          ${p.model ? `<span class="model-badge" title="권장 모델">${escapeHTML(p.model)}</span>` : ''}
+          <button class="fav-btn ${isFav ? 'active' : ''}" data-action="favorite" aria-label="${isFav ? '즐겨찾기 해제' : '즐겨찾기 추가'}" title="${isFav ? '즐겨찾기 해제' : '즐겨찾기 추가'}">
+            <svg class="fav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path d="M10 1.5l2.6 5.3 5.9.85-4.25 4.15 1 5.85L10 14.9 4.75 17.65l1-5.85L1.5 7.65l5.9-.85L10 1.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
       </div>
       <h3 class="card-title">${escapeHTML(p.title)}</h3>
       <p class="card-description">${escapeHTML(p.description || '')}</p>
@@ -52,15 +64,18 @@ export function renderCards(container, prompts, categories, handlers) {
         <div class="card-tags">
           ${(p.tags || []).slice(0, 3).map(t => `<span class="tag">${escapeHTML(t)}</span>`).join('')}
         </div>
-        <button class="copy-btn" data-action="copy" aria-label="${escapeHTML(p.title)} 프롬프트 복사">
-          <span class="copy-btn-default">복사</span>
-          <span class="copy-btn-done">복사됨!</span>
-        </button>
+        <div class="card-actions">
+          ${count > 0 ? `<span class="use-count" title="사용 횟수">${count}회</span>` : ''}
+          <button class="copy-btn" data-action="copy" aria-label="${escapeHTML(p.title)} 프롬프트 복사">
+            <span class="copy-btn-default">복사</span>
+            <span class="copy-btn-done">복사됨!</span>
+          </button>
+        </div>
       </div>
     `;
 
     card.addEventListener('click', (e) => {
-      if (e.target.closest('[data-action="copy"]')) return;
+      if (e.target.closest('[data-action="copy"]') || e.target.closest('[data-action="favorite"]')) return;
       handlers.onCardClick(p);
     });
 
@@ -77,6 +92,12 @@ export function renderCards(container, prompts, categories, handlers) {
       handlers.onCopyClick(p, copyBtn);
     });
 
+    const favBtn = card.querySelector('[data-action="favorite"]');
+    favBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      handlers.onFavoriteClick(p, favBtn, card);
+    });
+
     container.appendChild(card);
   }
 }
@@ -86,6 +107,7 @@ export function openModal(prompt, categories, promptText) {
   const catMap = new Map(categories.map(c => [c.id, c]));
   const cat = catMap.get(prompt.category);
 
+  modal.dataset.promptId = prompt.id;
   document.getElementById('modal-title').textContent = prompt.title;
 
   const catEl = modal.querySelector('.modal-category');
@@ -138,6 +160,30 @@ export function closeModal() {
   const modal = document.getElementById('prompt-modal');
   modal.classList.add('hidden');
   document.body.style.overflow = '';
+}
+
+export function updateCardAfterCopy(container, promptId, count) {
+  const card = container.querySelector(`.card[data-id="${promptId}"]`);
+  if (!card) return;
+  const actions = card.querySelector('.card-actions');
+  let countEl = actions.querySelector('.use-count');
+  if (!countEl) {
+    countEl = document.createElement('span');
+    countEl.className = 'use-count';
+    countEl.title = '사용 횟수';
+    actions.insertBefore(countEl, actions.firstChild);
+  }
+  countEl.textContent = `${count}회`;
+}
+
+export function updateCardFavorite(container, promptId, isFav) {
+  const card = container.querySelector(`.card[data-id="${promptId}"]`);
+  if (!card) return;
+  card.classList.toggle('is-favorite', isFav);
+  const btn = card.querySelector('[data-action="favorite"]');
+  btn.classList.toggle('active', isFav);
+  btn.setAttribute('aria-label', isFav ? '즐겨찾기 해제' : '즐겨찾기 추가');
+  btn.setAttribute('title', isFav ? '즐겨찾기 해제' : '즐겨찾기 추가');
 }
 
 function escapeHTML(str) {

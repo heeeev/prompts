@@ -1,6 +1,19 @@
 import { copyToClipboard } from './clipboard.js';
-import { filterPrompts, debounce } from './filter.js';
-import { renderCategoryFilters, renderCards, openModal, closeModal } from './render.js';
+import { filterPrompts, sortPrompts, debounce } from './filter.js';
+import {
+  renderCategoryFilters,
+  renderCards,
+  openModal,
+  closeModal,
+  updateCardAfterCopy,
+  updateCardFavorite,
+} from './render.js';
+import {
+  getFavorites,
+  toggleFavorite,
+  getCounts,
+  incrementCount,
+} from './storage.js';
 
 const state = {
   categories: [],
@@ -8,6 +21,8 @@ const state = {
   searchTerm: '',
   category: 'all',
   promptCache: new Map(),
+  favorites: getFavorites(),
+  counts: getCounts(),
 };
 
 async function init() {
@@ -61,6 +76,7 @@ function showLoadError() {
 
 function initEvents() {
   const searchInput = document.getElementById('search-input');
+
   searchInput.addEventListener('input', debounce((e) => {
     state.searchTerm = e.target.value;
     writeHash();
@@ -82,15 +98,37 @@ function initEvents() {
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
+
+    const isMod = e.metaKey || e.ctrlKey;
+    if (isMod && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+    if (e.key === '/' && document.activeElement !== searchInput && !e.metaKey && !e.ctrlKey) {
+      const inForm = document.activeElement instanceof HTMLInputElement
+        || document.activeElement instanceof HTMLTextAreaElement;
+      if (!inForm) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    }
   });
 
   document.getElementById('modal-copy').addEventListener('click', async () => {
+    const modal = document.getElementById('prompt-modal');
     const text = document.getElementById('modal-prompt').textContent;
     const btn = document.getElementById('modal-copy');
     const ok = await copyToClipboard(text);
     if (ok) {
       btn.classList.add('copied');
       setTimeout(() => btn.classList.remove('copied'), 1500);
+      const promptId = modal.dataset.promptId;
+      if (promptId) {
+        const newCount = incrementCount(promptId);
+        state.counts = getCounts();
+        updateCardAfterCopy(document.getElementById('cards-grid'), promptId, newCount);
+      }
     }
   });
 
@@ -135,11 +173,12 @@ function render() {
     searchTerm: state.searchTerm,
     category: state.category,
   });
+  const sorted = sortPrompts(filtered, state.favorites, state.counts);
 
   const grid = document.getElementById('cards-grid');
   const empty = document.getElementById('empty-state');
 
-  if (filtered.length === 0) {
+  if (sorted.length === 0) {
     grid.innerHTML = '';
     empty.classList.remove('hidden');
     return;
@@ -147,7 +186,7 @@ function render() {
 
   empty.classList.add('hidden');
 
-  renderCards(grid, filtered, state.categories, {
+  renderCards(grid, sorted, state.categories, state, {
     onCardClick: async (p) => {
       try {
         const text = await getPromptText(p);
@@ -163,10 +202,18 @@ function render() {
         if (ok) {
           btn.classList.add('copied');
           setTimeout(() => btn.classList.remove('copied'), 1500);
+          const newCount = incrementCount(p.id);
+          state.counts = getCounts();
+          updateCardAfterCopy(grid, p.id, newCount);
         }
       } catch (err) {
         console.error('Failed to copy:', err);
       }
+    },
+    onFavoriteClick: (p, btn, card) => {
+      const isFav = toggleFavorite(p.id);
+      state.favorites = getFavorites();
+      updateCardFavorite(grid, p.id, isFav);
     },
   });
 }

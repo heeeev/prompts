@@ -6,8 +6,23 @@ export function filterPrompts(prompts, { searchTerm = '', category = 'all' } = {
     return (
       p.title.toLowerCase().includes(term) ||
       (p.description || '').toLowerCase().includes(term) ||
-      (p.tags || []).some(t => t.toLowerCase().includes(term))
+      (p.tags || []).some(t => t.toLowerCase().includes(term)) ||
+      (p.model || '').toLowerCase().includes(term)
     );
+  });
+}
+
+export function sortPrompts(prompts, favorites, counts) {
+  return [...prompts].sort((a, b) => {
+    const aFav = favorites.has(a.id);
+    const bFav = favorites.has(b.id);
+    if (aFav !== bFav) return aFav ? -1 : 1;
+
+    const aCount = counts[a.id] || 0;
+    const bCount = counts[b.id] || 0;
+    if (aCount !== bCount) return bCount - aCount;
+
+    return 0;
   });
 }
 
