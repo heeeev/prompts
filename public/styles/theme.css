@@ -1,0 +1,89 @@
+:root {
+  --color-bg: #ffffff;
+  --color-bg-elevated: #fafafa;
+  --color-bg-hover: #f4f4f4;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #6b6b6b;
+  --color-text-muted: #9b9b9b;
+  --color-border: #e8e8e8;
+  --color-border-strong: #d4d4d4;
+
+  --color-accent: #1a1a1a;
+  --color-accent-text: #ffffff;
+  --color-focus: #4a90e2;
+
+  --color-cat-3d: #ffb088;
+  --color-cat-bbz: #f4a6a6;
+  --color-cat-image: #a6b4f4;
+  --color-cat-writing: #9fd4a4;
+  --color-cat-dev: #b4b4b4;
+  --color-cat-etc: #c5a6e0;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-card-hover: 0 4px 8px rgba(0, 0, 0, 0.06), 0 12px 24px rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.16);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+  --transition: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f0f10;
+  --color-bg-elevated: #1a1a1c;
+  --color-bg-hover: #232325;
+  --color-text: #f4f4f5;
+  --color-text-secondary: #a8a8ad;
+  --color-text-muted: #6b6b70;
+  --color-border: #2a2a2d;
+  --color-border-strong: #3a3a3d;
+
+  --color-accent: #f4f4f5;
+  --color-accent-text: #0f0f10;
+  --color-focus: #6ba5e7;
+
+  --color-cat-3d: #c08060;
+  --color-cat-bbz: #c07878;
+  --color-cat-image: #7888c0;
+  --color-cat-writing: #729c78;
+  --color-cat-dev: #888888;
+  --color-cat-etc: #9678b0;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-card-hover: 0 4px 8px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3);
+  --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0f0f10;
+    --color-bg-elevated: #1a1a1c;
+    --color-bg-hover: #232325;
+    --color-text: #f4f4f5;
+    --color-text-secondary: #a8a8ad;
+    --color-text-muted: #6b6b70;
+    --color-border: #2a2a2d;
+    --color-border-strong: #3a3a3d;
+
+    --color-accent: #f4f4f5;
+    --color-accent-text: #0f0f10;
+    --color-focus: #6ba5e7;
+
+    --color-cat-3d: #c08060;
+    --color-cat-bbz: #c07878;
+    --color-cat-image: #7888c0;
+    --color-cat-writing: #729c78;
+    --color-cat-dev: #888888;
+    --color-cat-etc: #9678b0;
+
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.2);
+    --shadow-card-hover: 0 4px 8px rgba(0, 0, 0, 0.4), 0 12px 24px rgba(0, 0, 0, 0.3);
+    --shadow-modal: 0 8px 32px rgba(0, 0, 0, 0.5);
+  }
+}

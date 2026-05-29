@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="자주 쓰는 AI 프롬프트 모음. 클릭 한 번에 복사.">
+  <title>프롬프트 라이브러리</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/theme.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="header-title">Prompt Library</h1>
+      <button class="theme-toggle" aria-label="테마 전환" title="테마 전환">
+        <span class="theme-icon-light">☀</span>
+        <span class="theme-icon-dark">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="controls">
+      <div class="search-bar">
+        <input
+          type="search"
+          id="search-input"
+          class="search-input"
+          placeholder="검색 (제목, 설명, 태그)"
+          aria-label="프롬프트 검색"
+        >
+      </div>
+      <div class="category-filters" id="category-filters" role="group" aria-label="카테고리 필터"></div>
+    </div>
+
+    <div class="cards-grid" id="cards-grid"></div>
+
+    <div class="empty-state hidden" id="empty-state">
+      <p>일치하는 프롬프트가 없어요.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>새 프롬프트 추가는 <code>data/prompts.json</code> 편집 후 push</p>
+  </footer>
+
+  <div class="modal hidden" id="prompt-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-content">
+      <button class="modal-close" data-close aria-label="닫기">×</button>
+      <header class="modal-header">
+        <h2 class="modal-title" id="modal-title"></h2>
+        <div class="modal-meta">
+          <span class="modal-category"></span>
+          <span class="modal-model"></span>
+        </div>
+        <div class="modal-tags"></div>
+      </header>
+
+      <section class="modal-body">
+        <div class="modal-description"></div>
+
+        <div class="prompt-block">
+          <div class="prompt-block-header">
+            <span class="prompt-block-label">PROMPT</span>
+            <button class="copy-btn copy-btn-large" id="modal-copy">
+              <span class="copy-btn-default">복사</span>
+              <span class="copy-btn-done">복사됨!</span>
+            </button>
+          </div>
+          <pre class="modal-prompt" id="modal-prompt"></pre>
+        </div>
+
+        <section class="modal-usage hidden" id="modal-usage-section">
+          <h3>사용법</h3>
+          <pre class="modal-usage-text" id="modal-usage"></pre>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

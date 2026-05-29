@@ -1,0 +1,24 @@
+{
+  "categories": [
+    { "id": "3d", "label": "3D / 모델링" },
+    { "id": "bbz", "label": "BBZ" },
+    { "id": "image", "label": "이미지 생성" },
+    { "id": "writing", "label": "글쓰기 / 카피" },
+    { "id": "dev", "label": "개발 / 코딩" },
+    { "id": "etc", "label": "기타" }
+  ],
+  "prompts": [
+    {
+      "id": "nomad-sketch",
+      "title": "노마드 스컬프 정면/측면 스케치",
+      "description": "사진 1장으로 3D 스컬프팅용 정면+측면 라인아트 시트 생성. ChatGPT에 입력 후 nomad-split 명령으로 2장 분리.",
+      "category": "3d",
+      "tags": ["nomad", "sculpt", "GPT-4o", "이미지생성"],
+      "model": "GPT-4o",
+      "promptFile": "data/prompts/nomad-sketch.md",
+      "usage": "1. 본 프롬프트 복사 → ChatGPT에 붙여넣기\n2. 같은 메시지에 레퍼런스 사진 첨부\n3. 받은 이미지 다운로드 후 터미널에서 nomad-split <이미지> 실행",
+      "createdAt": "2026-05-29",
+      "updatedAt": "2026-05-29"
+    }
+  ]
+}
