@@ -50,7 +50,7 @@ export function renderCards(container, prompts, categories, state, handlers) {
           ${escapeHTML(cat?.label || p.category)}
         </span>
         <div class="card-header-right">
-          ${p.model ? `<span class="model-badge" title="권장 모델">${escapeHTML(p.model)}</span>` : ''}
+          ${p.model ? `<span class="model-badge" title="권장 모델: ${escapeHTML(p.model)}">${escapeHTML(p.model)}</span>` : ''}
           <button class="fav-btn ${isFav ? 'active' : ''}" data-action="favorite" aria-label="${isFav ? '즐겨찾기 해제' : '즐겨찾기 추가'}" title="${isFav ? '즐겨찾기 해제' : '즐겨찾기 추가'}">
             <svg class="fav-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path d="M10 1.5l2.6 5.3 5.9.85-4.25 4.15 1 5.85L10 14.9 4.75 17.65l1-5.85L1.5 7.65l5.9-.85L10 1.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
