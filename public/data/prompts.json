@@ -105,6 +105,42 @@
       "updatedAt": "2026-05-29"
     },
     {
+      "id": "bbz-reels-reverse",
+      "title": "떡상 릴스 역설계",
+      "description": "떡상한 릴스 URL이나 트랜스크립트를 입력하면 첫 3초 후크·5막 구조·제작 패턴을 분석하고 BBZ 톤으로 재구성한 스크립트까지 제안.",
+      "category": "bbz",
+      "tags": ["BBZ", "인스타", "릴스", "트렌드분석"],
+      "model": "GPT-4o / Claude",
+      "promptFile": "data/prompts/bbz-reels-reverse.md",
+      "usage": "1. 본 프롬프트 복사 → ChatGPT에 붙여넣기\n2. 떡상한 릴스 URL이나 트랜스크립트, 또는 영상 설명 첨부\n3. 5막 구조 분석 + BBZ 버전 재구성안 받기",
+      "createdAt": "2026-05-30",
+      "updatedAt": "2026-05-30"
+    },
+    {
+      "id": "bbz-reels-hook",
+      "title": "3초 후크 생성기",
+      "description": "릴스 첫 3초를 잡는 후크 10개를 7가지 검증된 공식(호기심 갭·패턴 인터럽트·감정 트리거 등)으로 생성. BBZ 톤(담백·다정) 자동 반영.",
+      "category": "bbz",
+      "tags": ["BBZ", "인스타", "릴스", "후크", "카피"],
+      "model": "GPT-4o / Claude",
+      "promptFile": "data/prompts/bbz-reels-hook.md",
+      "usage": "1. 본 프롬프트 복사 → ChatGPT에 붙여넣기\n2. 주제/제품 + 영상 길이 입력\n3. 10개 후크 변형 중 골라서 사용",
+      "createdAt": "2026-05-30",
+      "updatedAt": "2026-05-30"
+    },
+    {
+      "id": "bbz-reels-script",
+      "title": "릴스 스크립트 (BBZ 톤)",
+      "description": "후크→본문→CTA 구조의 완전한 릴스 스크립트 생성. 씬별 화면·자막·카메라 컷·BGM 추천·캡션 3안·해시태그까지 한 번에.",
+      "category": "bbz",
+      "tags": ["BBZ", "인스타", "릴스", "스크립트", "캡션"],
+      "model": "GPT-4o / Claude",
+      "promptFile": "data/prompts/bbz-reels-script.md",
+      "usage": "1. 본 프롬프트 복사 → ChatGPT에 붙여넣기\n2. 주제/제품 + 영상 길이(15/30/60초) + 강조 포인트 입력\n3. 씬별 스크립트 + 자막 + 카메라 + BGM + 캡션 받기",
+      "createdAt": "2026-05-30",
+      "updatedAt": "2026-05-30"
+    },
+    {
       "id": "bbz-switch-blue",
       "title": "키보드 청축 이미지",
       "description": "BBZ 키보드 축 10종의 기준이 되는 청축 프롬프트. 다른 9개 축은 이 청축 이미지를 레퍼런스로 변형 생성.",
