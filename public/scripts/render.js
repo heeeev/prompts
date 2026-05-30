@@ -34,7 +34,6 @@ export function renderCards(container, prompts, categories, state, handlers) {
   for (const p of prompts) {
     const cat = catMap.get(p.category);
     const isFav = state.favorites.has(p.id);
-    const count = state.counts[p.id] || 0;
 
     const card = document.createElement('article');
     card.className = 'card' + (isFav ? ' is-favorite' : '');
@@ -65,7 +64,6 @@ export function renderCards(container, prompts, categories, state, handlers) {
           ${(p.tags || []).slice(0, 3).map(t => `<span class="tag">${escapeHTML(t)}</span>`).join('')}
         </div>
         <div class="card-actions">
-          ${count > 0 ? `<span class="use-count" title="사용 횟수">${count}회</span>` : ''}
           <button class="copy-btn" data-action="copy" aria-label="${escapeHTML(p.title)} 프롬프트 복사">
             <span class="copy-btn-default">복사</span>
             <span class="copy-btn-done">복사됨!</span>
@@ -160,20 +158,6 @@ export function closeModal() {
   const modal = document.getElementById('prompt-modal');
   modal.classList.add('hidden');
   document.body.style.overflow = '';
-}
-
-export function updateCardAfterCopy(container, promptId, count) {
-  const card = container.querySelector(`.card[data-id="${promptId}"]`);
-  if (!card) return;
-  const actions = card.querySelector('.card-actions');
-  let countEl = actions.querySelector('.use-count');
-  if (!countEl) {
-    countEl = document.createElement('span');
-    countEl.className = 'use-count';
-    countEl.title = '사용 횟수';
-    actions.insertBefore(countEl, actions.firstChild);
-  }
-  countEl.textContent = `${count}회`;
 }
 
 export function updateCardFavorite(container, promptId, isFav) {

@@ -5,15 +5,9 @@ import {
   renderCards,
   openModal,
   closeModal,
-  updateCardAfterCopy,
   updateCardFavorite,
 } from './render.js';
-import {
-  getFavorites,
-  toggleFavorite,
-  getCounts,
-  incrementCount,
-} from './storage.js';
+import { getFavorites, toggleFavorite } from './storage.js';
 
 const state = {
   categories: [],
@@ -22,11 +16,9 @@ const state = {
   category: 'all',
   promptCache: new Map(),
   favorites: getFavorites(),
-  counts: getCounts(),
 };
 
 async function init() {
-  initTheme();
   try {
     await loadData();
   } catch (err) {
@@ -36,13 +28,6 @@ async function init() {
   }
   initEvents();
   render();
-}
-
-function initTheme() {
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark' || saved === 'light') {
-    document.documentElement.dataset.theme = saved;
-  }
 }
 
 async function loadData() {
@@ -83,15 +68,6 @@ function initEvents() {
     render();
   }, 150));
 
-  document.querySelector('.theme-toggle').addEventListener('click', () => {
-    const current = document.documentElement.dataset.theme;
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = current === 'dark' || (!current && systemDark);
-    const next = isDark ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    localStorage.setItem('theme', next);
-  });
-
   document.getElementById('prompt-modal').addEventListener('click', (e) => {
     if (e.target.dataset.close !== undefined) closeModal();
   });
@@ -116,19 +92,12 @@ function initEvents() {
   });
 
   document.getElementById('modal-copy').addEventListener('click', async () => {
-    const modal = document.getElementById('prompt-modal');
     const text = document.getElementById('modal-prompt').textContent;
     const btn = document.getElementById('modal-copy');
     const ok = await copyToClipboard(text);
     if (ok) {
       btn.classList.add('copied');
       setTimeout(() => btn.classList.remove('copied'), 1500);
-      const promptId = modal.dataset.promptId;
-      if (promptId) {
-        const newCount = incrementCount(promptId);
-        state.counts = getCounts();
-        updateCardAfterCopy(document.getElementById('cards-grid'), promptId, newCount);
-      }
     }
   });
 
@@ -173,7 +142,7 @@ function render() {
     searchTerm: state.searchTerm,
     category: state.category,
   });
-  const sorted = sortPrompts(filtered, state.favorites, state.counts);
+  const sorted = sortPrompts(filtered, state.favorites);
 
   const grid = document.getElementById('cards-grid');
   const empty = document.getElementById('empty-state');
@@ -202,15 +171,12 @@ function render() {
         if (ok) {
           btn.classList.add('copied');
           setTimeout(() => btn.classList.remove('copied'), 1500);
-          const newCount = incrementCount(p.id);
-          state.counts = getCounts();
-          updateCardAfterCopy(grid, p.id, newCount);
         }
       } catch (err) {
         console.error('Failed to copy:', err);
       }
     },
-    onFavoriteClick: (p, btn, card) => {
+    onFavoriteClick: (p) => {
       const isFav = toggleFavorite(p.id);
       state.favorites = getFavorites();
       updateCardFavorite(grid, p.id, isFav);
