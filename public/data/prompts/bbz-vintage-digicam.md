@@ -62,9 +62,16 @@ The final image must contain **ZERO visible text**.
 - 카메라 바디가 사선으로 기울어지지 않게 한다.
 - 디카는 화면 프레임에 평행하게 반듯하게 놓여 있어야 한다.
 - 구도는 탑뷰 플랫레이 느낌이지만, 카메라의 방향은 반드시 정면 정렬로 유지한다.
-- 카메라는 상단 패널 가로폭의 약 **60~65% 크기**로 배치한다 (패널을 꽉 채우지 않는다).
+- 카메라는 상단 패널 가로폭의 **최대 60% 크기**로 배치한다 (패널을 꽉 채우지 않는다).
 - 카메라 위아래와 좌우에 침구 배경 여백을 넉넉하게 남긴다.
 - 카메라 바디와 스트랩이 프레임 가장자리에 닿거나 잘리지 않게 한다.
+
+**TOP CAMERA SIZE IS CRITICAL.**
+
+- The camera must occupy no more than 60% of the top panel width.
+- Large empty bedding area must remain visible around the camera.
+- The camera should feel intentionally small within the composition.
+- Negative space is more important than camera size.
 
 ## 4-2. 카메라 디자인
 
@@ -101,6 +108,14 @@ LCD 화면 안에는 업로드한 원본 이미지를 자연스럽게 넣는다.
 - 순백색 과노출 금지 — 크림 화이트와 웜 아이보리 톤 유지
 
 # 5. 하단 영역 — 메인 에디토리얼 이미지
+
+**DO NOT RECREATE THE BOTTOM IMAGE. INSERT THE UPLOADED IMAGE DIRECTLY.**
+
+- The bottom panel must be a direct placement of the uploaded image.
+- No re-rendering.
+- No regeneration.
+- No reinterpretation.
+- 단, 5-3의 빈티지 색감 보정(색감·그레인·블룸)만 예외로 허용한다 — 내용(피사체·구도·배경)은 절대 변경하지 않는다.
 
 - 업로드한 원본 이미지를 **풀블리드**로 크게 사용한다.
 - 이미지가 하단 영역 전체를 가득 채우게 한다.
