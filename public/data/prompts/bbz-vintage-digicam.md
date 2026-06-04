@@ -1,5 +1,10 @@
 업로드한 이미지를 기반으로 프리미엄 빈티지 디지털카메라 에디토리얼 콜라주 이미지로 재구성한다.
 
+# 0. HIGHEST PRIORITY RULES
+
+These rules override all artistic, aesthetic, stylistic, photographic, editorial, layout, and composition instructions.
+If any aesthetic instruction conflicts with these rules, follow these rules first.
+
 # 1. 절대 규칙 — 원본 이미지 사용 (최우선)
 
 업로드한 원본 이미지는 반드시 **정확히 2번만** 사용한다.
@@ -12,6 +17,15 @@
 - 반드시 업로드한 동일 원본 장면만 사용한다.
 - 하단 메인 이미지는 업로드 원본 이미지 그 자체를 기반으로 사용한다.
 - 새로운 인물, 새로운 배경, 유사한 대체 장면을 만들지 않는다.
+
+**IMAGE USAGE RULES (EN):**
+
+- MUST use the uploaded image exactly TWO times only — inside the camera LCD, and as the bottom editorial image.
+- The uploaded image must never appear a third time.
+- MUST NOT generate additional versions, alternative compositions, or variations of the uploaded image.
+- MUST NOT create a similar scene based on the uploaded image.
+- MUST NOT reinterpret the uploaded subject.
+- MUST NOT replace the uploaded image with a newly generated version.
 
 # 2. TEXT RULES — VERY IMPORTANT
 
@@ -72,6 +86,9 @@ The final image must contain **ZERO visible text**.
 - Large empty bedding area must remain visible around the camera.
 - The camera should feel intentionally small within the composition.
 - Negative space is more important than camera size.
+- Do not zoom the camera excessively.
+- The camera must never touch the frame edges.
+- The wrist strap must remain fully visible inside the frame.
 
 ## 4-2. 카메라 디자인
 
@@ -111,10 +128,12 @@ LCD 화면 안에는 업로드한 원본 이미지를 자연스럽게 넣는다.
 
 **DO NOT RECREATE THE BOTTOM IMAGE. INSERT THE UPLOADED IMAGE DIRECTLY.**
 
+- The bottom panel is NOT a newly generated image. The bottom panel IS the uploaded image itself.
 - The bottom panel must be a direct placement of the uploaded image.
-- No re-rendering.
-- No regeneration.
-- No reinterpretation.
+- No re-rendering. No regeneration. No reinterpretation.
+- Do not recreate it. Do not redraw it. Do not restyle it. Do not replace it.
+- The composition, subject, lighting, background, framing, and overall scene must remain identical to the uploaded image.
+- Only apply subtle color grading consistent with a vintage CCD camera aesthetic.
 - 단, 5-3의 빈티지 색감 보정(색감·그레인·블룸)만 예외로 허용한다 — 내용(피사체·구도·배경)은 절대 변경하지 않는다.
 
 - 업로드한 원본 이미지를 **풀블리드**로 크게 사용한다.
@@ -173,7 +192,25 @@ premium vintage digital camera editorial collage, early 2000s CCD digicam mood, 
 - 상단과 하단 비율이 흐려지지 않게
 - 2분할 구조가 애매하게 섞이지 않게
 
-# 8. 출력 사양
+# 8. FAILURE CONDITIONS
+
+The generation is considered FAILED if any of the following occurs:
+
+- The uploaded image appears more than two times.
+- The uploaded image is recreated instead of reused.
+- The bottom panel is regenerated, illustrated, or differs from the uploaded image.
+- New objects, new props, or a new background are added to the uploaded image.
+- The uploaded subject is modified.
+- The uploaded image is transformed into artwork, painting, illustration, drawing, or CGI.
+- Additional scenes inspired by the uploaded image are generated.
+- Any text, logo, watermark, letters, numbers, symbols, captions, or typography appear anywhere in the image.
+- The camera is tilted diagonally.
+- The LCD image becomes excessively blurry or unreadable.
+- The 50:50 split layout is not maintained.
+
+If any failure condition occurs, prioritize correcting it over artistic styling.
+
+# 9. 출력 사양
 
 - 9:16 vertical composition (Instagram Reels ratio)
 - 50:50 split layout
