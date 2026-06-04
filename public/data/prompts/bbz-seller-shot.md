@@ -1,9 +1,14 @@
 🚨 CRITICAL — PRODUCT MUST NOT BE MODIFIED:
 
+The uploaded product photo is the source of truth.
+
 The product in the reference image is a physical 3D-printed object with
 specific real-world properties. Reproduce it EXACTLY pixel-by-pixel as
 it appears in the reference. This is the #1 priority — more important
 than any other instruction.
+
+Environment generation is allowed.
+Product regeneration is NOT allowed.
 
 ABSOLUTELY DO NOT:
 - Add black outlines, cartoon outlines, or any line art to the product
@@ -16,6 +21,7 @@ ABSOLUTELY DO NOT:
 - Adjust the proportions or scale of any element
 - Add reflections, sparkles, or any visual effects to the product
 - Reinterpret the product in any artistic style
+- Enhance, beautify, clean up, or 'improve' the product in any way
 
 The product is a REAL physical object with:
 - Matte, slightly textured 3D-printed surface (NOT glossy plastic)
@@ -27,6 +33,9 @@ Treat the product as if you are simply moving it to a new background.
 Imagine you are doing a background replacement edit in Photoshop —
 the product pixels themselves must remain UNCHANGED. Only the
 environment around it changes.
+
+If any conflict occurs between scene aesthetics and product accuracy,
+always prioritize product accuracy.
 
 ---
 
@@ -61,16 +70,22 @@ REAL SCALE RULE:
 - The surrounding environment should feel larger than the product.
 
 Setting: a clean modern surface — plain white table, light gray concrete,
-stainless steel tray, clear glass shelf, or a sunlit windowsill. ONE prop
-maximum, and only if it feels accidental: a glass of iced water, the corner
-of a phone or keyboard, a magazine edge. NO dried flowers, NO ribbons,
-NO pearls, NO lace, NO ceramic trinket trays — nothing that looks styled
-for a photoshoot.
+stainless steel tray, clear glass shelf, or a sunlit windowsill. ONE loose
+prop maximum, and only if it feels accidental: a glass of iced water, the
+corner of a phone or keyboard, a magazine edge. Architectural context
+(window frame, sill, wall, floor) does not count as a prop, but background
+décor (plant pots, vases, books, trays) does — total loose objects must
+never exceed one, and the prop must stay secondary, never competing with
+the product for attention. NO dried flowers, NO ribbons, NO pearls,
+NO lace, NO ceramic trinket trays — nothing that looks styled for a
+photoshoot.
 
 Composition: casual snapshot framing — slightly tilted or off-center,
 sometimes cropped a bit too tight or too loose, like the third photo in a
 photo dump. Top-down or low angle. Hard shadows are welcome as a graphic
-element. Everything in focus — no simulated shallow depth of field.
+element in the environment, but shadows must never fall across or obscure
+the product itself — the product stays clearly lit and remains the visual
+focus. Everything in focus — no simulated shallow depth of field.
 
 SHADOW RULES:
 - Use only one primary light source.
@@ -78,6 +93,8 @@ SHADOW RULES:
 - Do not generate multiple shadows.
 - No artificial studio shadows or unrealistic shadow shapes.
 - All shadows must look naturally created by sunlight or camera flash.
+- Shadows must not cover or obscure the product. The product remains the
+  visual focus, not the shadows.
 
 Style: 2025-2026 Korean small brand Instagram feed — clean, candid,
 effortless. Reference mood: Musinsa brand feed, 29CM seller feed, Korean
@@ -97,7 +114,10 @@ FAIL IF:
 - product shape, color, texture, or proportions change
 - product scale changes, or the product occupies more than 25% of the frame
 - product becomes glossy or cartoon-like
+- the product appears enhanced, beautified, or 'improved'
 - outlines or line art appear
+- shadows fall across or obscure the product
+- more than one loose prop appears
 - decorative props dominate the scene
 - multiple inconsistent shadows appear
 - a warm beige filter wash appears
