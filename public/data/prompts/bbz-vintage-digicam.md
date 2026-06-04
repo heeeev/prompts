@@ -76,18 +76,18 @@ The final image must contain **ZERO visible text**.
 - 카메라 바디가 사선으로 기울어지지 않게 한다.
 - 디카는 화면 프레임에 평행하게 반듯하게 놓여 있어야 한다.
 - 구도는 탑뷰 플랫레이 느낌이지만, 카메라의 방향은 반드시 정면 정렬로 유지한다.
-- 카메라는 상단 패널 가로폭의 **최대 60% 크기**로 배치한다 (패널을 꽉 채우지 않는다).
-- 카메라 위아래와 좌우에 침구 배경 여백을 넉넉하게 남긴다.
+- 카메라는 상단 패널 가로폭의 약 **70~80% 크기**로 크게 배치한다.
+- 카메라가 상단 영역의 주인공 — LCD 화면 속 이미지가 한눈에 보일 만큼 크게.
+- 카메라 주변에 침구 배경 여백은 약간만 남긴다.
 - 카메라 바디와 스트랩이 프레임 가장자리에 닿거나 잘리지 않게 한다.
 
-**TOP CAMERA SIZE IS CRITICAL.**
+**TOP CAMERA SIZE:**
 
-- The camera must occupy no more than 60% of the top panel width.
-- Large empty bedding area must remain visible around the camera.
-- The camera should feel intentionally small within the composition.
-- Negative space is more important than camera size.
-- Do not zoom the camera excessively.
-- The camera must never touch the frame edges.
+- The camera is the hero of the top panel — render it LARGE and clearly visible.
+- The camera should occupy approximately 70~80% of the top panel width.
+- The LCD screen must be big enough that the image inside it is clearly visible.
+- Keep a small margin of bedding visible around the camera.
+- The camera must never touch the frame edges or be cropped.
 - The wrist strap must remain fully visible inside the frame.
 
 ## 4-2. 카메라 디자인
