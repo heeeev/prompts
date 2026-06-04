@@ -153,6 +153,42 @@
       "updatedAt": "2026-05-29"
     },
     {
+      "id": "bbz-genz-hip-hand",
+      "title": "Gen Z 힙 (손 연출)",
+      "description": "힙한 카페·스트릿 톤 + 손 연출. MZ 타겟 시리즈(엔젤코어·다마고치) 스토리·릴스용. 결과가 어두운 카페 톤으로 쏠리는 경향 — 밝은 무드가 필요하면 코케트/미니멀/Y2K 버전 사용.",
+      "category": "bbz",
+      "tags": ["BBZ", "GenZ", "힙", "손연출", "GPT-4o"],
+      "model": "GPT-4o",
+      "promptFile": "data/prompts/bbz-genz-hip-hand.md",
+      "usage": "1. PRODUCT INFO 3줄을 제품에 맞게 채움\n2. 제품 사진 첨부해서 GPT에 전달\n3. 손가락 개수·관절 자연스러운지 확인\n4. 결과 받으면 제품 변형 여부 꼭 확인",
+      "createdAt": "2026-05-12",
+      "updatedAt": "2026-06-04"
+    },
+    {
+      "id": "bbz-y2k-kitsch",
+      "title": "Y2K 키치 컬러풀",
+      "description": "컬러풀하고 펑키한 Y2K 무드. 디지캠/플래시 룩. BBZ 차별화 — Angelcore×Y2K 융합 라인, 키치 컬러 키링에 잘 맞음. 손 옵션.",
+      "category": "bbz",
+      "tags": ["BBZ", "Y2K", "키치", "GenZ", "GPT-4o"],
+      "model": "GPT-4o",
+      "promptFile": "data/prompts/bbz-y2k-kitsch.md",
+      "usage": "1. PRODUCT INFO 3줄을 제품에 맞게 채움\n2. 제품 사진 첨부해서 GPT에 전달\n3. 결과 받으면 제품 변형 여부 꼭 확인",
+      "createdAt": "2026-05-26",
+      "updatedAt": "2026-06-04"
+    },
+    {
+      "id": "bbz-genz-hip-nohand",
+      "title": "Gen Z 힙 (제품만)",
+      "description": "힙한 무드의 제품 단독 컷. 컨셉 룩북·무드 컷용. 사람·손 없이 제품이 명확한 포커스.",
+      "category": "bbz",
+      "tags": ["BBZ", "GenZ", "힙", "제품단독", "GPT-4o"],
+      "model": "GPT-4o",
+      "promptFile": "data/prompts/bbz-genz-hip-nohand.md",
+      "usage": "1. PRODUCT INFO 3줄을 제품에 맞게 채움\n2. 제품 사진 첨부해서 GPT에 전달\n3. 사람·신체 일부가 안 들어왔는지 확인\n4. 결과 받으면 제품 변형 여부 꼭 확인",
+      "createdAt": "2026-05-12",
+      "updatedAt": "2026-06-04"
+    },
+    {
       "id": "bbz-vintage-digicam",
       "title": "빈티지 감성디카 릴스 커버",
       "description": "업로드 사진을 빈티지 디카 에디토리얼 콜라주로 재구성. 상단 디카 LCD + 하단 풀블리드 2분할, 9:16 릴스 비율. 텍스트·타이포·로고 완전 금지.",
