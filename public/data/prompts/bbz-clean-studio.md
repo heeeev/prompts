@@ -1,51 +1,209 @@
-PRODUCT INFO (fill in before using):
-- Product type: [예: 3D-printed clicker keyring with shell charms / mechanical keyboard keycap / etc.]
-- Approximate size: [예: 4cm × 3cm × 2cm / 1.8cm square / etc.]
-- Number of items in frame: [예: 2 charms / 1 keycap / set of 3 / etc.]
+PRODUCT INFO
+- Product type: [3D-printed clicker keyring / keycap / etc.]
+- Approximate size: [e.g. 4cm × 3cm × 2cm]
+- Number of items in frame: [e.g. 2 charms / 1 keycap / set of 3]
 
----
+────────────────────
 
-Edit this product photo into a clean white studio product shot.
+HIGHEST PRIORITY RULE
 
-PRESERVE THE PRODUCT EXACTLY:
-- Keep every product in the frame 100% identical — same shape, color, texture,
-  proportions, 3D-printed layer details, surface finish, and ALL decorative
-  elements. Do NOT modify the product's color saturation, contrast, or any
-  visual property of the product itself.
-- Match the product's real-world scale based on the PRODUCT INFO above.
-- Only change the background and lighting.
+This is a PHOTO RETOUCH task, NOT a product generation task.
 
-BACKGROUND:
-- Pure white (#FFFFFF) seamless studio background, evenly lit.
-- Alternative: BBZ milky cream (#F2EBE3) when a warmer brand-tone shot is needed.
-- Background must be perfectly clean — no gradient banding, no shadows on the
-  wall, no objects, no patterns.
+Use the uploaded product pixels whenever possible.
 
-LIGHTING:
-- Soft, even studio lighting from above and slightly forward.
-- Bright and airy exposure — clean highlights without blowing out product details.
-- Subtle soft contact shadow directly under the product (5–10% opacity) to
-  anchor it on the surface. NOT a harsh drop shadow.
-- No colored light cast on the product. White-balanced neutral light only.
+Do not redraw the product.
 
-CAMERA & COMPOSITION:
-- Top-down or 3/4 angle (about 30–45 degrees) that shows the product's character.
-- Product centered or slightly off-center with generous, balanced negative space.
-- Sharp focus across the entire product (deeper depth of field than lifestyle shots).
-- Frame naturally — leave 25–30% margin around the product.
+Do not regenerate the product.
 
-STYLE:
-- Clean, professional e-commerce product photography for a minimal Korean brand.
-- Looks like a shot taken in a white lightbox with high-quality balanced lighting.
-- Soft and premium feel — not cold, not clinical.
+Do not reinterpret the product.
 
-STRICTLY AVOID:
-- Any modification to the product (shape, color, texture, details, proportions).
-- Harsh drop shadows, multiple shadows, or colored shadows.
-- Reflections that distort the product.
-- Background tint, gradient, or pattern unless specified.
-- Studio props (boxes, books, fabric) — keep it product-only.
-- Oversaturated colors, overly high contrast, HDR look.
-- Hyperrealistic CG render look, plastic-looking gloss boost.
-- Text, logos, watermarks.
-- Hands or any body parts.
+The product must remain identical to the uploaded image.
+
+The task is background replacement and lighting cleanup only.
+
+The product itself must remain pixel-identical to the uploaded image.
+
+────────────────────
+
+PRESERVE THE PRODUCT EXACTLY
+
+Keep every product in the frame 100% identical.
+
+Preserve:
+- shape
+- proportions
+- silhouette
+- color
+- color saturation
+- contrast
+- texture
+- 3D printing layer lines
+- surface finish
+- decorative details
+- seams
+- chain position
+- shadows naturally attached to the product
+
+Match the product's real-world scale based on PRODUCT INFO.
+
+Maintain the original product scale.
+
+Do not enlarge the product.
+
+Do not shrink the product.
+
+The product should occupy approximately the same percentage of the frame as in the original image.
+
+Preserve the original camera angle.
+
+Do not change the viewing angle.
+
+Do not rotate the product.
+
+Do not alter the composition.
+
+────────────────────
+
+SURFACE FINISH PRESERVATION
+
+Preserve the original surface finish exactly.
+
+Do not increase gloss.
+
+Do not add reflections.
+
+Do not add artificial shine.
+
+Do not make matte surfaces glossy.
+
+Do not make glossy surfaces matte.
+
+Preserve the original material appearance exactly.
+
+────────────────────
+
+BACKGROUND
+
+Pure white (#FFFFFF) seamless studio background, evenly lit.
+
+Alternative:
+BBZ milky cream (#F2EBE3)
+
+Background must be perfectly clean.
+
+No gradient.
+
+No texture.
+
+No wall shadow.
+
+No patterns.
+
+No props.
+
+No visual distractions.
+
+────────────────────
+
+LIGHTING
+
+Soft, even studio lighting from above and slightly forward.
+
+Bright and airy exposure.
+
+Clean highlights without blowing out product details.
+
+Neutral white-balanced lighting only.
+
+No colored light cast.
+
+Add only a subtle contact shadow directly beneath the product.
+
+Shadow opacity approximately 5–10%.
+
+No harsh drop shadow.
+
+No multiple shadows.
+
+────────────────────
+
+CAMERA & COMPOSITION
+
+Preserve the original framing whenever possible.
+
+Do not crop important parts of the product.
+
+Maintain generous balanced negative space.
+
+Leave approximately 25–30% margin around the product.
+
+Keep the product naturally centered.
+
+Sharp focus across the entire product.
+
+Do not simulate shallow depth of field.
+
+────────────────────
+
+STYLE
+
+Clean professional e-commerce product photography.
+
+Minimal Korean brand aesthetic.
+
+Looks photographed inside a premium white lightbox.
+
+Soft and premium.
+
+Clean but not clinical.
+
+Natural but controlled.
+
+────────────────────
+
+STRICTLY AVOID
+
+- changing product shape
+- changing product size
+- changing product color
+- changing product texture
+- changing product proportions
+- changing product position
+- changing product viewing angle
+- changing decorative details
+- changing chain placement
+- changing material appearance
+- adding gloss
+- adding reflections
+- adding props
+- adding fabric
+- adding books
+- adding boxes
+- adding hands
+- adding people
+- adding text
+- adding logos
+- adding watermarks
+- adding background patterns
+- HDR look
+- hyperrealistic CGI look
+- artificial rendering look
+
+────────────────────
+
+FAIL IF
+
+- the product shape changes
+- the product color changes
+- the product texture changes
+- the product size changes
+- the product is regenerated
+- decorative details are removed
+- decorative details are added
+- chain placement changes
+- the viewing angle changes
+- the composition changes
+- the material appearance changes
+- matte surfaces become glossy
+- glossy surfaces become matte
+- the product no longer matches the uploaded image

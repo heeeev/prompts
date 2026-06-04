@@ -43,39 +43,63 @@ change the surrounding scene and environment.
 
 Place the product into a new scene with these qualities:
 
-Shot on iPhone, casual photo taken by a small Korean handmade brand owner
-who personally styled and arranged the scene for their own online store
-listing. Soft natural daylight from a window (gentle highlights, soft
-shadows), slight depth of field, very subtle film grain. Warm milky cream
-tones, slightly desaturated. Looks like a real seller's product photo —
-genuine, slightly imperfect, but thoughtfully composed. NO PEOPLE, NO HANDS,
-NO BODY PARTS in frame.
+Shot on iPhone, quick casual snap by a young Korean brand owner for their
+own Instagram feed. Crisp bright daylight — direct sunlight through a window
+with sharp, defined shadows falling across the surface. Neutral or slightly
+cool white balance, true-to-life colors, gently muted but NOT warm-beige
+filtered. Minimal-editing look, like an unretouched photo dump post.
+NO PEOPLE, NO HANDS, NO BODY PARTS in frame.
 
-Setting: a small Korean maker's home studio or workspace desk. The product
-is placed on a tidy surface (light wood desk, cream linen cloth, white
-ceramic dish, or warm beige paper) with a few personally chosen styling
-props that the seller arranged themselves — for example, a small dried
-flower stem, a folded ribbon, a tiny ceramic tray, a pearl bead, or a
-soft fabric scrunch. Props should feel hand-picked and lived-in, not
-overly styled like a magazine shoot. Milky cream (#F2EBE3) tone preferred
-in the overall palette.
+(Alternative mood: direct on-camera flash snapshot at night, digicam look —
+use for drop announcements.)
 
-Composition: slightly off-center, casual phone-photo framing. Top-down
-or low 30-45 degree angle. Generous but natural negative space.
-Sometimes a slight tilt or imperfect alignment — like a quick shot
-the seller took to show the product's character. Not perfectly
-symmetrical.
+REAL SCALE RULE:
+- The product must appear at realistic real-world scale.
+- The product should occupy approximately 10–20% of the total image area.
+- Do not enlarge the product to become the dominant object in the frame.
+- Do not shrink the product unnaturally.
+- The surrounding environment should feel larger than the product.
 
-Style: Soft & Clean Korean handmade brand aesthetic. The kind of photo a
-small Korean Smart Store seller would post — warm, personal, calm.
-'정돈된 일상' + '셀러의 손길' vibe. Pinterest mood, but with the
-authenticity of a real seller's casual product shot.
+Setting: a clean modern surface — plain white table, light gray concrete,
+stainless steel tray, clear glass shelf, or a sunlit windowsill. ONE prop
+maximum, and only if it feels accidental: a glass of iced water, the corner
+of a phone or keyboard, a magazine edge. NO dried flowers, NO ribbons,
+NO pearls, NO lace, NO ceramic trinket trays — nothing that looks styled
+for a photoshoot.
 
-STRICTLY AVOID: any people, any hands, any body parts in frame. Also avoid:
-harsh flash, indie sleaze, Y2K maximalism, cluttered background,
-oversaturated colors, neon, studio lighting, professional product
-photography, advertisement-style polish, hyperrealistic CG render,
-overly styled magazine-look composition, glossy plastic finish, black
-outlines or cartoon styling, oversized or undersized product (must match
-real scale), text, logos, watermarks, or any modification to the product
-itself.
+Composition: casual snapshot framing — slightly tilted or off-center,
+sometimes cropped a bit too tight or too loose, like the third photo in a
+photo dump. Top-down or low angle. Hard shadows are welcome as a graphic
+element. Everything in focus — no simulated shallow depth of field.
+
+SHADOW RULES:
+- Use only one primary light source.
+- Shadow direction must be physically consistent across the scene.
+- Do not generate multiple shadows.
+- No artificial studio shadows or unrealistic shadow shapes.
+- All shadows must look naturally created by sunlight or camera flash.
+
+Style: 2025-2026 Korean small brand Instagram feed — clean, candid,
+effortless. Reference mood: Musinsa brand feed, 29CM seller feed, Korean
+indie lifestyle brands, casual founder-taken product photos, Seoul cafe
+and studio culture. Casually photographed, not art-directed — authentic
+rather than commercial. The product looks good because it IS good, not
+because the scene is decorated. Not Pinterest cottagecore.
+
+STRICTLY AVOID: any people, hands, or body parts. Also avoid: warm beige
+'감성' filter wash, dried flowers, ribbons, pearls, lace, miniature trinket
+styling, cluttered flat lay, 2015 handmade-market mood, soft dreamy blur,
+heavy film grain, studio lighting, advertisement polish, hyperrealistic CG
+render, oversized or undersized product (must match real scale), text,
+logos, watermarks, or any modification to the product itself.
+
+FAIL IF:
+- product shape, color, texture, or proportions change
+- product scale changes, or the product occupies more than 25% of the frame
+- product becomes glossy or cartoon-like
+- outlines or line art appear
+- decorative props dominate the scene
+- multiple inconsistent shadows appear
+- a warm beige filter wash appears
+- the image looks like a CG render or a studio advertisement
+- the product no longer matches the uploaded image
